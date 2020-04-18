@@ -1,0 +1,114 @@
+<!-- Add hero template option-->
+<!doctype html>
+
+<head>
+  <title>Tribute to Legends</title>
+  <link rel="stylesheet" href="tributecss.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div id="MySideNav" class="sidenav"> 
+    <a href="javascript:void(0)" class="close" onclick="closenav()">&times;</a>
+    <a href="intro.html">About Author</a>
+    <input type="button" value="More Heroes&#9662;" style="color: #818181" onclick="heroes()" id="dropbtn" class="dropdown"></input><!--&#9652    -->
+    <div id="heronamesid" class="heronames">
+      <ul>
+        <li>Yuvraj Singh</li><hr>
+        <li>Virat Kohli</li><hr>
+        <li>Virender Sehwag</li>
+      </ul>
+    </div>
+    <a href="#">Add Hero</a>
+  </div>
+  <div id="main">
+    <div class="toptext">
+      <span style="margin-left: 25px;position: relative;top:30px;"><span style="cursor: pointer;"><b class="wetribute"
+            id="wetri">WeTribute</b>.com</span><span
+          style="position: relative;top:12px;margin-right: 5px;float: right;font-size: 45px;">A Tribute to our
+          Heroes</span></span>
+    </div>
+    <div class="top">
+      <span class="material-icons" style="margin: 5px;color: white;cursor: pointer;" onclick="opennav()">dehaze</span>
+      <span class="topname">Tribute: M.S. Dhoni</span>
+      <span><a href="#"><input type="button" value="Dark Mode" class="button" onclick="btn()" id="btntext"></input></a></span>
+    </div>
+    <div>
+      <p style="font-size: 40px;"><b>M.S. Dhoni</b></p>
+      <p style="font-size: 36px;">The Man who made the dream come true</p>
+      <img src="msd.jpg" alt="M.S. Dhoni" class="img">
+      <p style="font-size: 32px;">Here's a time line of M.S. Dhoni: </p>
+      <ul class="high">
+        <li><b>August 7, 2007</b> - Dhoni is named as India captain for the 2007 ICC World T20 after senior stars pull
+          out of the competition.</li>
+        <li><b>September 19, 2007</b> - Dhoni is named captain of the Indian ODI team after Rahul Dravid resigns.</li>
+        <li><b>September 24, 2007</b> - Dhoni leads India to World T20 glory after beating Pakistan by five runs in the
+          final.</li>
+        <li><b>March 4, 2008</b> - Under the captaincy of Dhoni, India win a historic ODI series in Australia for the
+          first time ever.</li>
+        <li><b>April 9, 2009</b> - Dhoni leads India to their first Test series victory in New Zealand in 41 years.</li>
+        <li><b>December 6, 2009</b> - India reach the pinnacle of Test cricket as Dhoni guides his men to the number one
+          spot on the ICC Test Rankings.</li>
+        <li><b>June 24, 2010</b> - India win the Asia Cup for the first time in 15 years after beating Sri Lanka by 81
+          runs in the final.</li>
+        <li><b>April 2, 2011</b> - A day no Indian fan will forget! Dhoni is named Man of the Match in the final as
+          India win the World Cup on home soil. The Indian skipper scored an unbeaten 91 from 79 balls as the Men in
+          Blue chased down a target of 275.</li>
+        <li><b>August 22, 2011</b> - Dhoni suffers his first series loss as Test captain as England humiliate India 4-0
+          in a four-match Test series.</li>
+        <li><b>December 17, 2012</b> - More pressure mounts on Dhoni's position as Test skipper as India lose a Test
+          series at home for the first time in eight years.</li>
+        <li><b>June 23, 2013</b> - Dhoni completes a clean sweep of ICC trophies as captain, after India beat England by
+          five runs in a rain-reduced game in the ICC Champions Trophy final.</li>
+        <li><b>April 6, 2014</b> - India reach the World T20 final for the second time under Dhoni, but lose to Sri
+          Lanka in the decider.</li>
+        <li><b>January 4, 2017</b> - Dhoni resigns as captain of the ODI and T20I teams.</li>
+      </ul>
+      <p style="font-size: 30px;"> If you have time, you should read more about this incredible human being on his <a
+          href="https://en.wikipedia.org/wiki/MS_Dhoni" target=_blank>Wikipedia entry</a></p>
+    </div>
+  </div>
+  <script>
+    function heroes(){
+      var x= document.getElementById("heronamesid")
+      if(x.style.display == "none"){
+        x.style.display = "block"
+      }
+      else{
+        x.style.display = "none"
+      }
+    }
+    function opennav() {
+      document.getElementById("MySideNav").style.width = "250px"
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+    function closenav() {
+      document.getElementById("MySideNav").style.width = "0"
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+    function btn() {
+      var temp = document.getElementById("btntext")
+      if (temp.value == "Dark Mode") {
+        document.getElementById("main").style.backgroundColor = "black"
+        document.getElementById("main").style.color = "white"
+        //temp.value="Light Mode"-----> this adds a hidden value
+        temp.value = "Light Mode"
+
+        //hover in javascript
+        document.getElementById("wetri").onmouseover = function () { document.getElementById("wetri").style.color = "white" }
+        document.getElementById("wetri").onmouseout = function () { document.getElementById("wetri").style.color = "#4CAF50" }
+      }
+      else {
+        document.getElementById("wetri").onmouseover = function () { document.getElementById("wetri").style.color = "black" }
+        document.getElementById("wetri").onmouseout = function () { document.getElementById("wetri").style.color = "#4CAF50" }
+        document.getElementById("main").style.backgroundColor = "white"
+        document.getElementById("main").style.color = "black"
+        temp.value = "Dark Mode"
+      }
+    }
+  </script>
+</body>
+
+</html>
