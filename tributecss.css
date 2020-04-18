@@ -22,6 +22,7 @@ top: 0;
 .topname{
 color: white;
 font-size: 40px;
+position: absolute;
 margin-left: 10px;
 }
 .button{
@@ -29,7 +30,8 @@ float: right;
 font-size: 14px; 
 padding: 8px;
 margin-right: 10px;
-position: relative;
+position: absolute;
+right: 5px;
 top: 3px;
 color: black;
 border: 1px solid gray;
@@ -98,25 +100,3 @@ color: #818181;
 transition: margin-left .5s;
 padding: 0px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
