@@ -83,14 +83,14 @@ font-size: 36px;
 margin-left: 50px;
 color: #818181;
 }
-.heronames{
+#heronamesid{
     cursor: pointer;
     display: none;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
 }
-.heronames li:hover{
+#heronamesid li:hover{
     color: #f1f1f1;
 }
 .sidenav li{
@@ -100,3 +100,25 @@ color: #818181;
 transition: margin-left .5s;
 padding: 0px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
